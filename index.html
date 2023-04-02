@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-gb"></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scle=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Javascript Quiz Game</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="jsqg-container" id="jsqg_box">
+    <div class="jsqg_header" style="display: none;">
+    <div class="jsqg_head_text">Javascript Quiz Game</div>
+    <div class="jsqg_time_left">Time Left <div id="jsqg_timer">80</div> </div>   
+    
+    </div>
+    <div class="jsqg_body">
+
+        <div id="jsqg_info_box">
+            <div class="jsqg_info_head">Rules for this Quiz</div>
+            <div class="jsqg_info_list">
+                <div>1. You only have 80 seconds for each question.</div>
+                <div>2. Once you selected your option it can't be undone</div>
+                <div>3. Every incorrect answer subtracts 15 seconds from your timer</div>
+                <div>4. If you run out of time the correct answers will be shown and so will your score</div>
+            </div>
+            <div class="jsqg_info_folder">
+                <button class="jsqg_btn" id="jsqg_start">Start</button>
+            </div>
+        </div>
+        
+        <div class="jsqg_main_content" style="display: none;">
+            <h1 id="jsqg_question"></h1>
+            <div id="jsqg_code_box"><pre class="language-js"><code></code></pre></div>
+            <div id="jsqg_options"></div>
+        </div>
+
+    </div>
+
+    <div class="jsqg_footer" style="display: none;">
+        <button class="jsqg_btn" id="prev_question">Previous</button>
+        <div id="jsqg_total">1 of 6 Questions</div>
+        <button class="jsqg_btn" id="next_question">Next</button>
+    </div>
+</div>
+
+<script src="assets/script.js"></script>
+
+</body>
+
+</html>
