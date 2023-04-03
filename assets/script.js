@@ -1,4 +1,4 @@
-const jsq_questions = [
+const questions = [
 	{
 		"id": 2,
 		"question": "Which of the following is the correct syntax to redirect a URL using JavaScript?",
