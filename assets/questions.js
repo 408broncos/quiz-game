@@ -1,68 +1,56 @@
 var questions = [
 	{
-		"id": 2,
-		"question": "Which of the following is the correct syntax to redirect a URL using JavaScript?",
-		"options": {
-			"a": "window.location.href",
-			"b": "document.querySelector",
-			"c": "document.getElementById",
-			"d": "location.href"
-		},
-		"answer": "a"
+		question: "Which of the following is the correct syntax to redirect a URL using JavaScript?",
+		answer: [
+			{ text: "window.location.href", correct: true },
+			{ text: "document.querySelector", correct: false },
+			{ text: "document.getElementById", correct: false },
+			{ text: "location.href", correct: false },
+        ]
+    },
+	{
+		question: "How would you start a class element in css?",
+		answer: [
+			{ text: "<", correct: false },
+			{ text: "#", correct: false },
+			{ text: ".", correct: true },
+			{ text: "!", correct: false },
+        ]
 	},
 	{
-		"id": 2,
-		"question": "How would you start a class element in css?",
-		"options": {
-			"a": "<",
-			"b": "#",
-			"c": ".",
-			"d": "!"
-		},
-		"answer": "c"
+		question: "What is the function to start with when wanting to use a timer?",
+		answer: [
+			{ text: "function timer", correct: false },
+			{ text: "function math.floor", correct: false },
+			{ text: "function timerInterval", correct: false },
+			{ text: "function setTime", correct: true },
+        ]
 	},
 	{
-		"id": 2,
-		"question": "What is the function to start with when wanting to use a timer?",
-		"options": {
-			"a": "function timer",
-			"b": "function math.floor",
-			"c": "function timerInterval",
-			"d": "function setTime"
-		},
-		"answer": "d"
+		question: "What does HTML stand for?",
+		answer: [
+			{ text: "How to Make Language", correct: false },
+			{ text: "Hypertext Markdown Language", correct: false },
+			{ text: "Hypertext Markup Language", correct: true },
+			{ text: "Hitting the Mushy Lake", correct: false },
+        ]
 	},
 	{
-		"id": 2,
-		"question": "What does HTML stand for?",
-		"options": {
-			"a": "How to Make Language",
-			"b": "Hypertext Markdown Language",
-			"c": "Hypertext Markup Language",
-			"d": "Hitting the Mushy Lake"
-		},
-		"answer": "c"
+		question: "What is the correct element to start with in HTML when wanting to add a picture?",
+		answer: [
+			{ text: "<li>", correct: false },
+			{ text: "<link>", correct: false },
+			{ text: "<src>", correct: false },
+			{ text: "<img>", correct: true },
+        ]
 	},
 	{
-		"id": 2,
-		"question": "What is the correct element to start with in HTML when wanting to add a picture?",
-		"options": {
-			"a": "<li>",
-			"b": "<link>",
-			"c": "<src>",
-			"d": "<img>"
-		},
-		"answer": "a"
-	},
-	{
-		"id": 2,
-		"question": "Which object is used to hold data that represents a text form?",
-		"options": {
-			"a": "Alert",
-			"b": "String",
-			"c": "Null",
-			"d": "Boolean"
-		},
-		"answer": "b"
+		question: "Which object is used to hold data that represents a text form?",
+		answer: [
+			{ text: "Alert", correct: false },
+			{ text: "String", correct: true },
+			{ text: "Null", correct: false },
+			{ text: "Boolean", correct: false },
+        ]
 	},
 ];

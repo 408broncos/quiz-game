@@ -16,6 +16,7 @@ var nameField = document.getElementById("player-name");
 var restartButton = document.getElementById("restart-btn");
 var scoreField = document.getElementById("player-score");
 var scores = JSON.parse(localStorage.getItem("scores")) || [];
+
 var shuffledQuestions, currentQuestionIndex;
 
 
@@ -50,8 +51,8 @@ function setNextQuestion() {
 };
 
 function showQuestion(question) {
-    questionEl.innerText = questions.question
-    question.answers.forEach(answer => {
+    questionEl.innerText = question.question
+    question.answer.forEach(answer => {
         var button = document.createElement("button")
         button.innerText = answer.text
         button.classList.add("btn")
