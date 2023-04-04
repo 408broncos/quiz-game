@@ -54,7 +54,7 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 };
 
-//QUestions are shown
+//Questions are shown
 function showQuestion(question) {
     questionEl.innerText = question.question
     question.answer.forEach(answer => {
