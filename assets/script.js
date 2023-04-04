@@ -1,4 +1,4 @@
-
+//Quiz will start with 60 seconds
 var timeLeft = 60;
 var timerID;
 var timerEl = document.getElementById("timer");
@@ -19,13 +19,14 @@ var scores = JSON.parse(localStorage.getItem("scores")) || [];
 
 var shuffledQuestions, currentQuestionIndex;
 
-
+//start button transitions into the first question
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++
     setNextQuestion()
 });
 
+//time starts
 function timeTick() {
     timeLeft--;
     timerEl.textContent = "Time; " + timeLeft;
@@ -34,6 +35,7 @@ function timeTick() {
     }
 }
 
+//Starting quiz
 function startGame() {
     timerID = setInterval(timeTick, 1000);
     startContainerEl.classList.add("hide");
@@ -41,15 +43,18 @@ function startGame() {
     currentQuestionIndex = 0
     questionContainerEl.classList.remove("hide");
 
+    //Timer starts when the start button is clicked
     timeTick();
     setNextQuestion();
 };
 
+//Next Question
 function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 };
 
+//QUestions are shown
 function showQuestion(question) {
     questionEl.innerText = question.question
     question.answer.forEach(answer => {
@@ -65,6 +70,7 @@ function showQuestion(question) {
 };
 
 
+//Reset function
 function resetState() {
     nextButton.classList.add("hide")
     checkAnswerEl.classList.add("hide")
@@ -75,6 +81,7 @@ function resetState() {
 };
 
 
+//select answer
 function selectAnswer(e) {
     var selectedButton = e.target;
     var correct = selectedButton.dataset.correct;
@@ -86,6 +93,7 @@ function selectAnswer(e) {
         if (timeLeft <= 15) {
             timeLeft = 0;
         }else {
+            //if answer is wrong 15 seconds will be taken out
             timeLeft -= 15;
         }
     }
@@ -103,6 +111,7 @@ function selectAnswer(e) {
     }
 };
 
+//shows correct answer by the buttons colors
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -112,12 +121,14 @@ function setStatusClass(element, correct) {
     }
 };
 
+//classes are removed
 function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 };
 
 
+//scores are saved
 function saveScore() {
     clearInterval (timerID);
     timerEl.textContent = "Time: " + timeLeft;
@@ -129,6 +140,7 @@ function saveScore() {
 };
 
 var loadScores = function () {
+    //scores are pulled from local storage
 
     if (!savedScores) {
         return false;
@@ -151,6 +163,7 @@ var loadScores = function () {
 };
 
 
+//high scores are shown
 function showHighScores(name) {
     document.getElementById("highscores").classList.remove("hide");
     document.getElementById("score-container").classList.add("hide");
@@ -191,6 +204,7 @@ submitButton.addEventListener("click", function (event) {
 });
 
 
+//restart and reload
 restartButton.addEventListener("click", function () {
     window.location.reload();
 });
